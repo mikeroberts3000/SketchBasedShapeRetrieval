@@ -1,0 +1,20 @@
+ifdef MAKERULESDIR
+        include $(MAKERULESDIR)/Makedefs.Linux
+else
+        include Makedefs.Linux
+endif
+
+ARCHOPTS = -arch i386 -m32 -march=core2 -mfpmath=sse -mtune=native
+ARCHOPTS += -fopenmp
+
+XLIBDIR = /usr/X11/lib
+INCLUDES += -I/usr/X11/include
+
+LDOPTS = 
+
+LIBDIR += -L/usr/X11/lib
+LIBS += -lglut
+
+ifdef DEBUG
+  	COPTS += -g -g0 -ggdb3
+endif

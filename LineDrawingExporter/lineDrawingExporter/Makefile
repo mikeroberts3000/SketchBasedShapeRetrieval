@@ -1,0 +1,39 @@
+# DEBUG = y
+TRIMESHDIR = ../trimesh2
+MAKERULESDIR = $(TRIMESHDIR)
+INCLUDES = -I$(TRIMESHDIR)/include -I/usr/local/include
+LIBDIR = -L$(TRIMESHDIR)/lib.$(UNAME) -L/usr/local/lib
+
+include $(MAKERULESDIR)/Makerules
+ifeq ($(UNAME),Win32)
+  COPTS += -mwindows
+endif
+
+SOURCES = lineDrawingExporter.cc apparentridge.cc
+OFILES = $(addprefix $(OBJDIR)/,$(SOURCES:.cc=.o))
+PROGS = lineDrawingExporter$(EXE)
+
+default: $(PROGS)
+
+LIBS += -ltrimesh -lopencv_core -lopencv_imgproc -lopencv_highgui
+
+lineDrawingExporter$(EXE) : $(OBJDIR)/lineDrawingExporter.o $(OBJDIR)/apparentridge.o
+	$(LINK) $(GLLIBS)
+
+clean :
+	-rm -f $(OFILES) $(OBJDIR)/Makedepend $(OBJDIR)/*.d
+	-rm -rf $(OBJDIR)/ii_files
+	-rmdir $(OBJDIR)
+
+spotless : clean
+	-rm -f $(PROGS)
+	-rmdir $(DESTDIR)
+
+VERSION = 1.5
+
+tar:
+	cd .. && tar zcvf rtsc-$(VERSION).tar.gz `find rtsc-$(VERSION) -name 'OBJ*' -prune -o -name CVS -prune -o -type f -print | sort`
+
+zip:
+	cd .. && find rtsc-$(VERSION) -name 'OBJ*' -prune -o -name CVS -prune -o -print | sort | zip -9 rtsc-$(VERSION).zip -@
+
