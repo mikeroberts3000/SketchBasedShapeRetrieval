@@ -1,7 +1,7 @@
 SketchBasedShapeRetrieval
 =========================
 
-Easy-to-read C++/Python implementation of the paper <a href='http://cybertron.cg.tu-berlin.de/eitz/projects/sbsr/'>Sketch-Based Shape Retrieval</a>.
+Easy-to-read C++/Python implementation of the shape matching pipeline in the paper <a href='http://cybertron.cg.tu-berlin.de/eitz/projects/sbsr/'>Sketch-Based Shape Retrieval</a>.
 
 #### Generating Line Drawings
 
