@@ -1,9 +1,6 @@
-SketchBasedShapeRetrieval
-=========================
-
 This repository contains an easy-to-read C++/Python implementation of the shape matching pipeline in the paper <a href='http://cybertron.cg.tu-berlin.de/eitz/projects/sbsr/'>Sketch-Based Shape Retrieval</a>.
 
-#### Generating Line Drawings
+### Generating Line Drawings
 
 To generate line drawings, I hacked the <a href='http://gfx.cs.princeton.edu/gfx/proj/sugcon/'>Suggestive Contours</a> software to take a 3D mesh file as command-line input and to produce a series of images as output. The resulting images show the mesh rendered with the <a href='http://people.csail.mit.edu/tjudd/apparentridges.html'>Apparent Ridges</a> algorithm from different views.
 
@@ -11,7 +8,7 @@ Note that the <a href='http://gfx.cs.princeton.edu/gfx/proj/sugcon/'>Suggestive 
 
 The code for generating line drawings is checked into the LineDrawingExporter folder.
 
-#### Running the Shape Matching Pipeline
+### Running the Shape Matching Pipeline
 
 The rest of the shape matching pipeline can be browsed online with the <a href='http://nbviewer.ipython.org/'>IPython Notebook Viewer</a> using the links below.
 
