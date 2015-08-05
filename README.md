@@ -22,5 +22,3 @@ The rest of the shape matching pipeline can be browsed online with the <a href='
 8. <a href='http://nbviewer.ipython.org/urls/raw.github.com/mroberts3000/SketchBasedShapeRetrieval/master/SketchBasedShapeRetrieval/IPython/08 Compute Matches from Input Sketch (Cython).ipynb'>Compute Matches from Input Sketch using Cython for Extra Speed</a>
 
 There is also some useful debugging code that you can find by digging through the source. As above, you can browse this code online using the <a href='http://nbviewer.ipython.org/'>IPython Notebook Viewer</a>.
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/3df96319dd517d78163c9bf0d26a1047 "githalytics.com")](http://githalytics.com/mroberts3000/SketchBasedShapeRetrieval)
